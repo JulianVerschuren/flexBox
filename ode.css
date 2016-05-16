@@ -1,22 +1,125 @@
 body{
-background-color: green;
+background-color: white;
+font-family: sans-serif;
+line-height: 1.2;
+
 
 }
 
-#mainContent{
-width: 500px;
+.wrapper{
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+}
+
+header{
+
+padding-left: 1em;
+width: 100%;
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+}
+
+header p {
+
+text-align: right;
+margin-right: 1em;
+margin-left: auto;
+-webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+}
+
+header h1{
+color: teal;
+letter-spacing: .2em;
+
+}
+
+section.albums{
+padding: 2em;
+min-width: 15em;
+margin: .5em;
+background-color: teal;
+border-radius: 1em;
+-webkit-box-flex: 1;
+-webkit-flex: 1 0 20%;
+    -ms-flex: 1 0 20%;
+        flex: 1 0 20%;
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-webkit-flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
+
+}
+
+section#bc{
+
+background-color:teal;
+
+}
+section#bc:hover{
+
+background-color:darkgoldenrod;
+cursor: pointer;
+
+}
+
+section#bc button:hover{
+
+background-color:blue;
+cursor: pointer;
+}
+
+
+
+section.albums img{
+width: 100%;
+height: auto;
+
+}
+
+section.albums:hover{
+
+background-color: darkcyan;
+
+}
+
+section.albums p:nth-last-child(2){
+padding-bottom: 2em;
+
+}
+
+section.albums button:last-child{
+
+width: 10em;
+padding: .5em;
+background-color: orange;
+border-radius: 5em;
+margin: auto auto 0 auto;
+
+}
+
+section.albums a{
+margin: auto auto 0 auto;
 
 }
 
 
-#mainContent  {
+section.albums button:last-child:hover{
+background-color: darkorange;
 
-width: 500px;
-
-}
-
-p{
-
-width: 500px;
 
 }
