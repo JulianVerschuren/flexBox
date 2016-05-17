@@ -1,11 +1,12 @@
 body {
-	font-family: sans-serif;
+	font-family: serif;
+	font-weight: 600;
 	margin: 0;
 }
 
 header {
-	background-color: cadetblue;
-	color: orange;
+	background-color: teal;
+	color: azure;
 }
 
 header h1 {
@@ -18,15 +19,83 @@ aside {
 	background-color: dimgray;
 }
 
+aside p {
+	color: azure;
+}
+
 article {
 	padding: 1em;
 }
 
 footer {
 	padding: 1em;
-	background-color: crimson;
+	background-color: teal;
 	color: white;
 }
+
+
+/* list items van nav */
+
+nav {
+	background-color: #333;
+	
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+}
+
+nav ul li {
+	
+}
+
+nav ul li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	background-color: #111;
+}
+
+
+#search{
+
+display: -webkit-box;
+
+display: -webkit-flex;
+
+display: -ms-flexbox;
+
+display: flex;
+
+}
+
+#search input[type="search"]{
+
+-webkit-box-flex: 1;
+
+-webkit-flex: 1 0 auto;
+
+    -ms-flex: 1 0 auto;
+
+        
+
+}
+
 
 
 /* lay-out met flexbox */
@@ -35,12 +104,22 @@ footer {
 /* eerst mobiel */
 
 main {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 
 aside {
-	order: 1;
+	-webkit-box-ordinal-group: 2;
+	-webkit-order: 1;
+	    -ms-flex-order: 1;
+	        order: 1;
 }
 
 footer:after {
@@ -48,21 +127,42 @@ footer:after {
 }
 
 
+
+
+
+
 /*vanaf 26 em minimaal wijdte */
 
 @media screen and (min-width: 26em) {
 	main {
-		flex-direction: row;
-		flex-wrap: wrap;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		        flex-wrap: wrap;
 	}
 	article {
 		width: 100%;
 	}
 	aside {
-		flex: 1;
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
 	}
 	footer:after {
 		content: 'dit is voor schermen tussen de 26 en 36 em'
+	}
+	nav{
+		-webkit-box-flex: 3;
+		-webkit-flex: 3;
+		    -ms-flex: 3;
+		        flex: 3;
+		
+
 	}
 }
 
@@ -70,21 +170,24 @@ footer:after {
 /* vanaf 36 em : */
 
 @media screen and (min-width: 36em) {
-
-main{
-flex-wrap: nowrap;
-}
-
-	article{
-	  width: auto;
-	flex: 3;
+	main {
+		-webkit-flex-wrap: nowrap;
+		    -ms-flex-wrap: nowrap;
+		        flex-wrap: nowrap;
 	}
-
-	aside{
-	order: 0;
-	
+	article {
+		width: auto;
+		-webkit-box-flex: 3;
+		-webkit-flex: 3;
+		    -ms-flex: 3;
+		        flex: 3;
 	}
-
+	aside {
+		-webkit-box-ordinal-group: 1;
+		-webkit-order: 0;
+		    -ms-flex-order: 0;
+		        order: 0;
+	}
 	footer:after {
 		content: 'dit is voor schermen groter dan 36 em'
 	}

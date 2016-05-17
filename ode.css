@@ -123,3 +123,12 @@ background-color: darkorange;
 
 
 }
+
+footer {
+	padding: 1em;
+	background-color: teal;
+	color: white;
+	border-radius: 1em;
+}
+
+
